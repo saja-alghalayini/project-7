@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from 'axios';
-
-// import "./reg.css";
+import "../css/register.css";
 
 const regExp = RegExp(
     /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/
@@ -50,22 +49,19 @@ export default class UserForm extends Component {
         }
     }
 
-
     onSubmit = e => {
         e.preventDefault();
 
         if (formValid(this.state)) {
             console.log(this.state.email,"form Valid");
-            let first_name=this.state.fname
+            let first_name=this.state.first_name
+            let last_name=this.state.last_name
             let email=this.state.email
             let Password=this.state.password
             let Phone_number=this.state.phone_number
-
-          axios.post('http://localhost/phpProject7/connection.php?name='+first_name+'&email='+email+'&password='+Password+'&phone_number='+Phone_number)
+          axios.post('http://localhost/job_hooks/API/regisUser.php?first_name='+first_name+ '&last_name='+last_name+'&email='+email+'&pass='+Password+'&phone='+Phone_number)
           window.location.href = "./Login";
 
-          
-            
         } else {
             console.log("Form is invalid!");
         }
@@ -111,31 +107,38 @@ export default class UserForm extends Component {
     };
 
     render() {
-      console.log("hello regester");
+      console.log("hello register");
         const { isError } = this.state;
 
         return (
 
+            <>
+            
+            <div style={{ padding: "40px", backgroundColor: '#4c5595', textAlign: "center" }}>
+                <h1 style={{ color: 'white' }}>Register</h1>
+                <h5>Happy to have you join us </h5>
+            </div>
+
           <div className="forms" > 
             <form onSubmit={this.onSubmit} noValidate>
 
-              <h1>Registration</h1>
+              {/* <h1>Registration</h1> */}
 
 
                 <div className="form-group">
                   <div className="form2">
 
-                    <label>Name</label>
+                    <label>First Name</label>
                     
                     <input
                         type="text"
                         className={isError.first_name.length > 0 ? "is-invalid form-control" : "form-control"}
                         name="first_name"
                         onChange={this.formValChange}
-                    />
+                        />
                     {isError.first_name.length > 0 && (
                         <span className="invalid-feedback">{isError.first_name}</span>
-                    )}
+                        )}
                 </div>
 
                 
@@ -147,10 +150,10 @@ export default class UserForm extends Component {
                         className={isError.last_name.length > 0 ? "is-invalid form-control" : "form-control"}
                         name="last_name"
                         onChange={this.formValChange}
-                    />
+                        />
                     {isError.last_name.length > 0 && (
                         <span className="invalid-feedback">{isError.last_name}</span>
-                    )}
+                        )}
                 </div>
 
 
@@ -161,10 +164,10 @@ export default class UserForm extends Component {
                         className={isError.email.length > 0 ? "is-invalid form-control" : "form-control"}
                         name="email"
                         onChange={this.formValChange}
-                    />
+                        />
                     {isError.email.length > 0 && (
                         <span className="invalid-feedback">{isError.email}</span>
-                    )}
+                        )}
                 </div>
 
                 <div className="form-group">
@@ -174,30 +177,31 @@ export default class UserForm extends Component {
                         className={isError.password.length > 0 ? "is-invalid form-control" : "form-control"}
                         name="password"
                         onChange={this.formValChange}
-                    />
+                        />
                     {isError.password.length > 0 && (
                         <span className="invalid-feedback">{isError.password}</span>
-                    )}
+                        )}
                 </div>
 
                 <div className="form-group">
-                    <label>phone number</label>
+                    <label>Phone Number</label>
                     <input
                         type="tel"
                         className={isError.phone_number.length > 0 ? "is-invalid form-control" : "form-control"}
                         name="phone_number"
                         onChange={this.formValChange}
-                    />
+                        />
                     {isError.phone_number.length > 0 && (
                         <span className="invalid-feedback">{isError.phone_number}</span>
-                    )}
+                        )}
                 </div>
 
-                <button type="submit" className="btn btn-block btn-danger">Create User</button>
+                <button type="submit" className="reg-btn">Create User</button>
                 </div>
 
             </form>
             </div>
+                        </>
            
         );
     }

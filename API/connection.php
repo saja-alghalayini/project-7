@@ -1,5 +1,4 @@
 <?php
-
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: access");
 header("Access-Control-Allow-Methods: POST");
@@ -11,12 +10,10 @@ $dbUserName='root';
 $password='';
 $database='seventh_project';
 
-$conn = mysqli_connect($serverName, $dbUserName, $password, $database);
+$con = mysqli_connect($serverName, $dbUserName, $password, $database);
 
 // Check connection
-
-if (!$conn) {
+if (!$con) {
     die("Connection failed: " . mysqli_connect_error());
   }
-
 ?>

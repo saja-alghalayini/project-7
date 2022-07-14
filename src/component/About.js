@@ -1,631 +1,474 @@
-import React from 'react';
-import './css/about.css';
-import './css/aboutSimplegrid.css';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+<<<<<<< HEAD
+import Carousel from 'react-bootstrap/Carousel';
+=======
+>>>>>>> 522cc7ad4b23ccc9b7a888de47bb2d0081df4ce5
+
 
 
 function About() {
-    return (
-        <>
-            {/* {/* Preloader Start  */} *
-   
-    {/* <link rel="shortcut icon" href="logo.png"></link> */}
-  <header>
-     {/* Header Start */}
-     <div className="header-area header-transparrent">
-           <div className="headder-top header-sticky">
-                <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-lg-3 col-md-2">
-                            {/* Logo */}
-                            <div className="logo">
-                                <a href="index.html"><img src="assets/img/logo/logo.png" height= "100px" alt="" /></a>
-                            </div>  
-                        </div>
-                        <div className="col-lg-9 col-md-9">
-                            <div className="menu-wrapper">
-                                {/* Main-menu */}
-                                <div className="main-menu">
-                                    <nav className="d-none d-lg-block">
-                                        <ul id="navigation">
-                                            <li><a href="./index.html">Home</a></li>
-                                            <li><a href="./job_listing.html">Find a Jobs </a></li>
-                                            <li><a href="./about.html">About</a></li>
-                                            <li><a href="#">Page</a>
-                                                <ul className="submenu">
-                                                    <li><a href="blog.html">Blog</a></li>
-                                                    <li><a href="single-blog.html">Blog Details</a></li>
-                                                    <li><a href="elements.html">Elements</a></li>
-                                                    <li><a href="job_details.html">job Details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                        </ul>
-                                    </nav>
-                                </div>          
-                                {/* Header-btn */}
-                                <div className="header-btn d-none f-right d-lg-block">
-                                    <a href="#" className="btn head-btn1">Register</a>
-                                    <a href="#" className="btn head-btn2">Login</a>
+  const [uname, SetName] = useState('');
+  const [email, SetEmail] = useState('');
+  const [msg, SetMsg] = useState('');
+
+  const rating = () => {
+    // axios.get(`http://localhost/job_hooks/API/updateUserInfo.php?id=1&uname=${uname}&email=${email}&msg=${msg}`)
+    // .then((data) =>{
+    // setComment(data.data)
+    // console.log(data.data);
+    // });
+    // },[])
+
+  }
+
+  // const  rating = ()=>{
+  // axios.get(`http://localhost/job_hooks/API/updateUserInfo.php?id=1&uname=${uname}&email=${email}&msg=${msg}`)    
+
+
+  return (
+    <>
+<<<<<<< HEAD
+      <div class="single-slider section-overly slider-height2 d-flex align-items-center" data-background="assets/img/hero/about.jpg">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-12">
+              <div class="hero-cap text-center">
+                <p className='hero-text'>About us</p>
+=======
+      <div class="single-slider section-overly slider-height2 d-flex align-items-center" data-background="assets/img/hero/about.jpg"><div class="container"><div class="row"><div class="col-xl-12"><div class="hero-cap text-center"><h2 style={{ padding: "35px", color:'#fff'}}>About us</h2>
+>>>>>>> 522cc7ad4b23ccc9b7a888de47bb2d0081df4ce5
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+      {/* End banner Area */}
+      {/* Start about-info Area */}
+      <section className="about-info-area section-gap">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-lg-6 info-left">
+              <img className="mt-5 img-fluid" src="https://media.istockphoto.com/photos/top-view-of-a-white-desktop-concept-job-search-picture-id1279104620?k=20&m=1279104620&s=612x612&w=0&h=Lit4OzCRPW6Z5Pq1L4b9ZjUJvx6McLJySTLnUjJsECE=" alt="" />
+            </div>
+            <div className="mt-5 col-lg-6 info-right">
+              <h6>About Us</h6>
+              <h1>Who We Are?</h1>
+              <p>
+<<<<<<< HEAD
+              to help people find jobs.  boasting over 250 monthly users with nearly 10 new job listings added every minute. Biggest doesn`t always mean best, but we chose Indeed as the best overall job website due to its size, the number of industries, and lifestyles catered to, and its unmatched update frequency. 
+=======
+                Here, I focus on a range of items and features that we use in life
+                without giving them a second thought. such as Coca Cola. Dolor sit
+                amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco.
+>>>>>>> 522cc7ad4b23ccc9b7a888de47bb2d0081df4ce5
+              </p>
+            </div>
+          </div>
+        </div>
+<<<<<<< HEAD
+      </section><br/><br/><br/><br/><br/><br/>
+      {/* End about-info Area */}
+{/* Testimonial Start */}
+<h2 className="cent mb-5">Our Client Reviews</h2>
+        <div className="testimonial-area padding">
+            <div className="container mb-5">
+                {/* Testimonial contents */}
+                <div className="row d-flex justify-content-center">
+                    <div className="col-xl-8 col-lg-8 col-md-10">
+                        <div className="h1-testimonial-active dot-style">
+                            {/* Single Testimonial */}
+                            <div className="single-testimonial text-center">
+                                {/* Testimonial Content */}
+                                <div className="testimonial-caption bg-color-slider">
+                                    {/* founder */}
+
+
+
+
+                                    
+
+<Carousel >
+ <Carousel.Item>
+<img
+className="d-block w-25"
+src="https://avatars.githubusercontent.com/u/100213753?v=4"
+alt="First slide"
+/>
+<Carousel.Caption>
+<span>Dua-Alsafasfeh</span>
+<p>Communication Engineering</p>
+<div className="testimonial-top-cap">
+<h5 className="ml w-75">“"I loved everything about job Hooks! This flexible, work from home job has already made my life better!"”</h5>
+</div>
+</Carousel.Caption>
+</Carousel.Item>
+<Carousel.Item>
+<img
+className="d-block w-25"
+src="https://avatars.githubusercontent.com/u/100212231?v=4"
+alt="Second slide"
+/>
+<Carousel.Caption>
+<span>Anas Allawafeh</span>
+<p>Mining Engineering</p>
+<div className="testimonial-top-cap">
+<h5 className="ml w-75">“"I loved everything about job Hooks! This flexible, work from home job has already made my life better!"”</h5>
+</div>
+</Carousel.Caption>
+</Carousel.Item>
+<Carousel.Item>
+<img
+className="d-block w-25"
+src="https://avatars.githubusercontent.com/u/62554357?v=4"
+alt="Third slide"
+/>
+<Carousel.Caption>
+<span>Obada_alshafeey</span>
+<p>Web Devloper</p>
+<div className="testimonial-top-cap">
+<h5 className="ml w-75">“I was able to get a job through you, you deserve more than a word of thanks. I was able to find many opportunities that fit my abilities and skills.”</h5>
+</div>
+</Carousel.Caption>
+</Carousel.Item>
+</Carousel>
+
+
+
+
+
+                                    
                                 </div>
                             </div>
                         </div>
-                        {/* Mobile Menu */}
-                        <div className="col-12">
-                            <div className="mobile_menu d-block d-lg-none"></div>
-                        </div>
                     </div>
                 </div>
-           </div>
-       </div>
-        {/* Header End */}
-  </header>
+            </div><br/><br/><br/><br/>
 
+          {/* <div className="w-50  h-100">
 
-
-
-
-
-
-
-
-
-  
-  <main>
-
-
-
-
-
-
-
-   
-  <>
-  {/* Services Section */}
-  <div className="wrap services-wrap" id="services">
-    <section className="grid grid-pad services">
-      <h2 style={{ color: "#010b1d" }}>Our Services</h2>
-      <div className="col-1-4 service-box service-1">
-        <div className="content">
-          <div className="service-icon">
-            <i
-              className="fa-solid fa-globe"
-              style={{ fontSize: 80, color: "#fb246a" }}
-            />
-          </div>
-          <div className="service-entry">
-            <h3 style={{ color: "#010b1d" }}>All Around The World</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-              feugiat tellus eget libero pretium, sollicitudin feugiat libero.
-            </p>
-          </div>
+            <Carousel >
+             <Carousel.Item>
+        <img
+          className="w-25"
+          src="https://avatars.githubusercontent.com/u/100213753?v=4"
+          alt="First slide"
+        /><br/>
+        <Carousel.Caption>
+        <span>Dua-Alsafasfeh</span>
+        <p>Communication Engineering</p>
+        <div className="testimonial-top-cap">
+         <p>“"I loved everything about job Hooks! This flexible, work from home job has already made my life better!"”</p>
         </div>
-      </div>
-      <div className="col-1-4 service-box service-2">
-        <div className="content">
-          <div className="service-icon">
-            <i
-              className="fa fa-tachometer"
-              style={{ fontSize: 80, color: "#fb246a" }}
-            />
-          </div>
-          <div className="service-entry">
-            <h3 style={{ color: "#010b1d" }}>Higher employment rate</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-              feugiat tellus eget libero pretium, sollicitudin feugiat libero.
-            </p>
-          </div>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-25"
+          src="https://avatars.githubusercontent.com/u/100212231?v=4"
+          alt="Second slide"
+        />
+        <Carousel.Caption>
+        <span>Anas Allawafeh</span>
+         <p>Communication Engineering</p>
+        <div className="testimonial-top-cap">
+         <p>“"I loved everything about job Hooks! This flexible, work from home job has already made my life better!"”</p>
         </div>
-      </div>
-      <div className="col-1-4 service-box service-3">
-        <div className="content">
-          <div className="service-icon">
-            <i
-              className="fa-solid fa-user-shield"
-              style={{ fontSize: 80, color: "#fb246a" }}
-            />
-          </div>
-          <div className="service-entry">
-            <h3 style={{ color: "#010b1d" }}>High Security Level</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-              feugiat tellus eget libero pretium, sollicitudin feugiat libero.
-            </p>
-          </div>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-25"
+          src="https://avatars.githubusercontent.com/u/62554357?v=4"
+          alt="Third slide"
+          />
+
+        <Carousel.Caption>
+        <span>Obada_alshafeey</span>
+         <p>Web Devloper</p>
+         <div className="testimonial-top-cap">
+           <p>“I was able to get a job through you, you deserve more than a word of thanks. I was able to find many opportunities that fit my abilities and skills.”</p>
+         </div>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+    </div> */}
+
+
         </div>
-      </div>
-      <div className="col-1-4 service-box service-4">
-        <div className="content">
-          <div className="service-icon">
-            <i
-              className="fa fa-diamond"
-              style={{ fontSize: 80, color: "#fb246a" }}
-            />
-          </div>
-          <div className="service-entry">
-            <h3 style={{ color: "#010b1d" }}>Endless Possibilities </h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-              feugiat tellus eget libero pretium, sollicitudin feugiat libero.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-  {/* End Services Section */}
-  {/* Quotes Section */}
-  <div className="wrap services-wrap">
-    <section className="grid grid-pad">
-      <div className="col-1-1 service-box cl-client-carousel-container">
-        <div className="content">
-          <div className="cl-client-carousel">
-            <div className="item client-carousel-item">
-              {/* Start of item */}
-              <div className="quotes-icon">
-                <i className="icon-quotes-left" />
-              </div>
-              <p>
-                The7 is an extraordinary, awesome Theme, I would recommend this
-                Theme to anyone for their next project. Go ahead and download it
-                now!
-              </p>
-              <h4>-David Bell</h4>
-            </div>
-            {/* End of item */}
-            <div className="item client-carousel-item">
-              {/* Start of item */}
-              <div className="quotes-icon">
-                <i className="icon-quotes-left" />
-              </div>
-              <p>
-                The good times are for those who take action. The7 is a simple
-                and easy to use template for creative people. Download this
-                theme and give it a try!
-              </p>
-              <h4>-Eve Stinger</h4>
-            </div>
-            {/* End of item */}
-            <div className="item client-carousel-item">
-              {/* Start of item */}
-              <div className="quotes-icon">
-                <i className="icon-quotes-left" />
-              </div>
-              <p>
-                Awesome theme! Lorem ipsum dolor sit amet, consectetur
-                adipisicing elit. Accusamus incidunt possimus eveniet aperiam,
-                minus deleniti iure ipsa praesentium amet, labore voluptatum
-                fugit earum, porro non sequi sint soluta reprehenderit ad?
-              </p>
-              <h4>-Will Peters</h4>
-            </div>
-            {/* End of item */}
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-  {/* End Quotes Section */}
-  {/* Team Section */}
-  <div className="wrap team-wrap grey" id="team">
-    <div className="grid grid-pad">
-      <div className="content">
-        <h2 style={{ color: "#010b1d" }}>Meet Our Team</h2>
-        <div className="col-1-4">
-          <div className="content staff-content">
-            <div className="recent-work staff-img">
-              <div className="img-wrap staff-img">
-                <img
-                  src="images/team/Saja.png"
-                  alt="Saja G."
-                  style={{ height: 335 }}
-                />
-                <div className="team-social">
-                  <a className="sl-fb" href="#">
-                    <i className="fa-brands fa-facebook" />
-                  </a>
-                  <a className="sl-tw" href="#">
-                    <i className="fa-brands fa-github" />
-                  </a>
-                  <a className="sl-gp" href="#">
-                    <i className="fa-brands fa-google" />
-                  </a>
-                  <a className="sl-ln" href="#">
-                    <i className="fa-brands fa-linkedin" />
-                  </a>
-                </div>
-              </div>
-              <div className="work-info staff-info">
-                <h5>Saja Al Ghalayini</h5>
-                <span>Product Owner</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col-1-4">
-          <div className="content staff-content">
-            <div className="recent-work staff-img">
-              <div className="img-wrap staff-img">
-                <img
-                  src="images/team/Tamara.png"
-                  alt="Tamara S."
-                  style={{ height: 335 }}
-                />
-                <div className="team-social">
-                  <a className="sl-fb" href="#">
-                    <i className="fa-brands fa-facebook" />
-                  </a>
-                  <a className="sl-tw" href="#">
-                    <i className="fa-brands fa-github" />
-                  </a>
-                  <a className="sl-gp" href="#">
-                    <i className="fa-brands fa-google" />
-                  </a>
-                  <a className="sl-ln" href="#">
-                    <i className="fa-brands fa-linkedin" />
-                  </a>
-                </div>
-              </div>
-              <div className="work-info staff-info">
-                <h5>Tamara Shbatat</h5>
-                <span>Scrum Master</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col-1-4">
-          <div className="content staff-content">
-            <div className="recent-work staff-img">
-              <div className="img-wrap staff-img">
-                <img
-                  src="images/team/Bahaa.jpeg"
-                  alt="Bahaa A."
-                  style={{ height: 335 }}
-                />
-                <div className="team-social">
-                  <a className="sl-fb" href="#">
-                    <i className="fa-brands fa-facebook" />
-                  </a>
-                  <a className="sl-tw" href="#">
-                    <i className="fa-brands fa-github" />
-                  </a>
-                  <a className="sl-gp" href="#">
-                    <i className="fa-brands fa-google" />
-                  </a>
-                  <a className="sl-ln" href="#">
-                    <i className="fa-brands fa-linkedin" />
-                  </a>
-                </div>
-              </div>
-              <div className="work-info staff-info">
-                <h5>Bahaa Aldeen</h5>
-                <span>Developer</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col-1-4">
-          <div className="content staff-content">
-            <div className="recent-work staff-img">
-              <div className="img-wrap staff-img">
-                <img
-                  src="images/team/Raghad.jpeg"
-                  alt="Raghad K."
-                  style={{ height: 335 }}
-                />
-                <div className="team-social">
-                  <a className="sl-fb" href="#">
-                    <i className="fa-brands fa-facebook" />
-                  </a>
-                  <a className="sl-tw" href="#">
-                    <i className="fa-brands fa-github" />
-                  </a>
-                  <a className="sl-gp" href="#">
-                    <i className="fa-brands fa-google" />
-                  </a>
-                  <a className="sl-ln" href="#">
-                    <i className="fa-brands fa-linkedin" />
-                  </a>
-                </div>
-              </div>
-              <div className="work-info staff-info">
-                <h5>Raghad ALKarasneh</h5>
-                <span>Developer</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  {/* End Team Section */}
-  {/* Clients Logos Section */}
-  <div className="wrap">
-    <div className="grid grid-pad">
-      <div className="col-1-1">
-        <div className="content">
-          {/* Start of Carousel Container */}
-          <div className="cl-logo-carousel col-sm-12">
-            <div className="item">
-              {/* Start of item */}
-              <a href="#">
-                <figure>
-                  <img src="images/clients/Care.png" alt="" />
-                </figure>
-              </a>
-            </div>
-            {/* End of item */}
-            <div className="item">
-              {/* Start of item */}
-              <a href="#">
-                <figure>
-                  <img src="images/clients/Shoofni.png" alt="" />
-                </figure>
-              </a>
-            </div>
-            {/* End of item */}
-            <div className="item">
-              {/* Start of item */}
-              <a href="#">
-                <figure>
-                  <img src="images/clients/Orange.png" alt="" />
-                </figure>
-              </a>
-            </div>
-            {/* End of item */}
-            <div className="item">
-              {/* Start of item */}
-              <a href="#">
-                <figure>
-                  <img src="images/clients/Care.png" alt="" />
-                </figure>
-              </a>
-            </div>
-            {/* End of item */}
-            <div className="item">
-              {/* Start of item */}
-              <a href="#">
-                <figure>
-                  <img src="images/clients/Shoofni.png" alt="" />
-                </figure>
-              </a>
-            </div>
-            {/* End of item */}
-            <div className="item">
-              {/* Start of item */}
-              <a href="#">
-                <figure>
-                  <img src="images/clients/Orange.png" alt="" />
-                </figure>
-              </a>
-            </div>
-            {/* End of item */}
-            <div className="item">
-              {/* Start of item */}
-              <a href="#">
-                <figure>
-                  <img src="images/clients/Care.png" alt="" />
-                </figure>
-              </a>
-            </div>
-            {/* End of item */}
-            <div className="item">
-              {/* Start of item */}
-              <a href="#">
-                <figure>
-                  <img src="images/clients/Shoofni.png" alt="" />
-                </figure>
-              </a>
-            </div>
-            {/* End of item */}
-          </div>
-          {/* End of Carousel Container */}
-        </div>
-      </div>
-    </div>
-  </div>
-  {/* End Clients Logos Section */}
-</>
+        {/* Testimonial End */}
 
-
-
-
-    
-  </main>
-
-
-
-
-
-
-  <footer>
-    {/* Footer Start*/}
-    <div className="footer-area footer-bg footer-padding">
-      <div className="container">
-        <div className="row d-flex justify-content-between">
-          <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-            <div className="single-footer-caption mb-50">
-              <div className="single-footer-caption mb-30">
-                <div className="footer-tittle">
-                  <h4>About Us</h4>
-                  <div className="footer-pera">
-                    <p>
-                      Heaven frucvitful doesn't cover lesser dvsays appear
-                      creeping seasons so behold.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-xl-3 col-lg-3 col-md-4 col-sm-5">
-            <div className="single-footer-caption mb-50">
-              <div className="footer-tittle">
-                <h4>Contact Info</h4>
-                <ul>
-                  <li>
-                    <p>Address :Your address goes here, your demo address.</p>
-                  </li>
-                  <li>
-                    <a href="#">Phone : +8880 44338899</a>
-                  </li>
-                  <li>
-                    <a href="#">Email : info@colorlib.com</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="col-xl-3 col-lg-3 col-md-4 col-sm-5">
-            <div className="single-footer-caption mb-50">
-              <div className="footer-tittle">
-                <h4>Important Link</h4>
-                <ul>
-                  <li>
-                    <a href="#"> View Project</a>
-                  </li>
-                  <li>
-                    <a href="#">Contact Us</a>
-                  </li>
-                  <li>
-                    <a href="#">Testimonial</a>
-                  </li>
-                  <li>
-                    <a href="#">Proparties</a>
-                  </li>
-                  <li>
-                    <a href="#">Support</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="col-xl-3 col-lg-3 col-md-4 col-sm-5">
-            <div className="single-footer-caption mb-50">
-              <div className="footer-tittle">
-                <h4>Newsletter</h4>
-                <div className="footer-pera footer-pera2">
-                  <p>
-                    Heaven fruitful doesn't over lesser in days. Appear
-                    creeping.
-                  </p>
-                </div>
-                {/* Form */}
-                <div className="footer-form">
-                  <div id="mc_embed_signup">
-                    <form
-                      target="_blank"
-                      action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&id=92a4423d01"
-                      method="get"
-                      className="subscribe_form relative mail_part"
-                    >
-                      <input
-                        type="email"
-                        name="email"
-                        id="newsletter-form-email"
-                        placeholder="Email Address"
-                        className="placeholder hide-on-focus"
-                        onfocus="this.placeholder = ''"
-                        onblur="this.placeholder = ' Email Address '"
-                      />
-                      <div className="form-icon">
-                        <button
-                          type="submit"
-                          name="submit"
-                          id="newsletter-submit"
-                          className="email_icon newsletter-submit button-contactForm"
-                        >
-                          <img src="assets/img/icon/form.png" alt="" />
-                        </button>
+      {/* Start our team area */}
+      <section id="team">
+        <div className="container my-3 py-5 text-center">
+          <div className="row">
+                    <div className="row mb-5">
+                      <div className="col">
+                        <h1>Our Team</h1>
+                        <p className="my-3">
+          
+                        </p>
                       </div>
-                      <div className="mt-10 info" />
-                    </form>
+                    </div>
+=======
+      </section>
+      {/* End about-info Area */}
+
+
+      {/* Start our team area */}
+      <section id="team">
+        <div className="container my-3 py-5 text-center">
+          <div className="row mb-5">
+            <div className="col">
+              <h1>Our Team</h1>
+              <p className="my-3">
+
+              </p>
+            </div>
+          </div>
+          <div className="row">
+>>>>>>> 522cc7ad4b23ccc9b7a888de47bb2d0081df4ce5
+            <div className="col-lg-3 col-md-6 pt-1">
+              <div className="card h-100">
+                <div className="card-body">
+                  <img
+                    className="img-fouild rounded w-75 mb-3"
+                    src="https://avatars.githubusercontent.com/u/100211528?v=4"
+                    alt="Sophie"
+                  />
+                  <h5>BahaaEdeen AlNabulsi</h5>
+                  <h5>Full-Stack Develpoer</h5>
+                  <p>
+
+                  </p>
+                  {/* <div className="d-flex flex-row justify-content-center">
+                    <div className="p-4">
+<<<<<<< HEAD
+                    <a href="" target="_blank">
+=======
+                      <a href="" target="_blank">
+>>>>>>> 522cc7ad4b23ccc9b7a888de47bb2d0081df4ce5
+                        <i class="fa-brands fa-facebook"></i>
+                      </a>
+                    </div>
+                    <div className="p-4">
+                      <a href="" target="_blank">
+                        <i className="fa-brands fa-github"></i>
+                      </a>
+                    </div>
+                    <div className="p-4">
+                      <a href="" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                      </a>
+                    </div>
+                  </div> */}
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-6 pt-1">
+              <div className="card h-100">
+                <div className="card-body">
+                  <img
+                    className="img-fouild rounded w-75 mb-3"
+                    src="https://avatars.githubusercontent.com/u/100213822?v=4"
+                    alt="lucy"
+                  />
+                  <h5>saja Alghalayini </h5>
+                  <h5>Full-Stack Develpoer</h5>
+                  <p>
+
+                  </p>
+                  {/* <div className="d-flex flex-row justify-content-center">
+                    <div className="p-4">
+                      <a href="" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                      </a>
+                    </div>
+                    <div className="p-4">
+                      <a href="" target="_blank">
+                        <i className="fa-brands fa-github"></i>
+                      </a>
+                    </div>
+                    <div className="p-4">
+                      <a href="" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                      </a>
+                    </div>
+                  </div> */}
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-6 pt-1">
+              <div className="card h-100">
+                <div className="card-body">
+                  <img
+                    className="img-fouild rounded w-75 mb-3"
+                    src="https://avatars.githubusercontent.com/u/49879845?v=4"
+                    alt="Brad"
+                  />
+                  <h5>Raghad Al-Karasneh </h5>
+                  <h5>Full-Stack Develpoer</h5>
+                  <p>
+
+                  </p>
+                  {/* <div className="d-flex flex-row justify-content-center">
+                    <div className="p-4">
+                      <a href="" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                      </a>
+                    </div>
+                    <div className="p-4">
+                      <a href="" target="_blank">
+                        <i className="fa-brands fa-github"></i>
+                      </a>
+                    </div>
+                    <div className="p-4">
+                      <a href="" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                      </a>
+                    </div>
+                  </div> */}
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-6 pt-1">
+              <div className="card h-100">
+                <div className="card-body">
+                  <img
+                    className="img-fouild rounded w-75 mb-3"
+                    src="https://avatars.githubusercontent.com/u/100212077?v=4"
+                    alt="andres"
+                  />
+                  <h5>Tamara Al-Shabatat</h5>
+                  {/* <h5>Full-Stack Develpoer</h5> */}
+<<<<<<< HEAD
+                  <h5>Scrum Master / Full-Stack Develpoer</h5>
+=======
+                  <h5>Scrum Master</h5>
+>>>>>>> 522cc7ad4b23ccc9b7a888de47bb2d0081df4ce5
+                  <p>
+
+                  </p>
+                  {/* <div className="d-flex flex-row justify-content-center">
+                    <div className="p-4">
+                      <a href="https://www.linkedin.com/in/roayaseen/" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                      </a>
+                    </div>
+                    <div className="p-4">
+                      <a href="https://github.com/roayas" target="_blank">
+                        <i className="fa-brands fa-github"></i>
+                      </a>
+                    </div>
+                    <div className="p-4">
+                      <a href="https://www.linkedin.com/in/roayaseen/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i> */}
+                      {/* </a> */}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        {/*  */}
-        <div className="row footer-wejed justify-content-between">
-          <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-            {/* logo */}
-            <div className="footer-logo mb-20">
-              <a href="index.html">
-                <img src="assets/img/logo/logo2_footer.png" alt="" />
-              </a>
-            </div>
-          </div>
-          <div className="col-xl-3 col-lg-3 col-md-4 col-sm-5">
-            <div className="footer-tittle-bottom">
-              <span>5000+</span>
-              <p>Talented Hunter</p>
-            </div>
-          </div>
-          <div className="col-xl-3 col-lg-3 col-md-4 col-sm-5">
-            <div className="footer-tittle-bottom">
-              <span>451</span>
-              <p>Talented Hunter</p>
-            </div>
-          </div>
-          <div className="col-xl-3 col-lg-3 col-md-4 col-sm-5">
-            {/* Footer Bottom Tittle */}
-            <div className="footer-tittle-bottom">
-              <span>568</span>
-              <p>Talented Hunter</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    {/* footer-bottom area */}
-    <div className="footer-bottom-area footer-bg">
-      <div className="container">
-        <div className="footer-border">
-          <div className="row d-flex justify-content-between align-items-center">
-            <div className="col-xl-10 col-lg-10 ">
-              <div className="footer-copy-right">
-                <p>
-                  {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
-                  Copyright © All rights reserved | This template is made with{" "}
-                  <i className="fa fa-heart" aria-hidden="true" /> by{" "}
-                  <a href="https://colorlib.com" target="_blank">
-                    Colorlib
-                  </a>
-                  {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
-                </p>
-              </div>
-            </div>
-            <div className="col-xl-2 col-lg-2">
-              <div className="footer-social f-right">
-                <a href="#">
-                  <i className="fab fa-facebook-f" />
-                </a>
-                <a href="#">
-                  <i className="fab fa-twitter" />
-                </a>
-                <a href="#">
-                  <i className="fas fa-globe" />
-                </a>
-                <a href="#">
-                  <i className="fab fa-behance" />
-                </a>
+          {/* </div> */}
+        {/* </div> */}
+      </section>
+      {/* Start testimonial Area */}
+      {/* <section className="testimonial-area section-gap">
+        <div className="container">
+          <div className="row d-flex justify-content-center">
+            <div className="menu-content pb-70 col-lg-8">
+              <div className="title text-center">
+                <h1 className="mb-10">Testimonial from our Clients</h1>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    {/* Footer End*/}
-  </footer>
+          <div className="row">
+            <div className="active-testimonial">
+              {commnet.map((comment) =>{
+                console.log(comment.rating);
+                return(
+                              <div className="single-testimonial item d-flex flex-row">
+                              <div className="thumb">
+                                <img className="img-fluid" src="img/elements/user3.png" alt="" height={60} width={60}/>
+                              </div>
 
-</>
+                              <div className="desc">
 
-        
-        
+                              <div className="star">
+                                  {comment.rating == 1 ? <>
+                                  <span className="fa fa-star checked" />
+                                  <span className="fa fa-star" />
+                                  <span className="fa fa-star" />
+                                  <span className="fa fa-star" />
+                                  <span className="fa fa-star" /></> : ''}
+                                  {comment.rating == 2 ? <>
+                                  <span className="fa fa-star checked" />
+                                  <span className="fa fa-star checked" />
+                                  <span className="fa fa-star" />
+                                  <span className="fa fa-star" />
+                                  <span className="fa fa-star" /></> : ''}
+                                  {comment.rating == 3 ? <>
+                                  <span className="fa fa-star checked" />
+                                  <span className="fa fa-star checked" />
+                                  <span className="fa fa-star checked" />
+                                  <span className="fa fa-star" />
+                                  <span className="fa fa-star" /></> : ''}
+                                  {comment.rating == 4 ? <>
+                                  <span className="fa fa-star checked" />
+                                  <span className="fa fa-star checked" />
+                                  <span className="fa fa-star checked" />
+                                  <span className="fa fa-star checked" />
+                                  <span className="fa fa-star" /></> : ''}
+                                  {comment.rating == 5 ? <>
+                                  <span className="fa fa-star checked" />
+                                  <span className="fa fa-star checked" />
+                                  <span className="fa fa-star checked" />
+                                  <span className="fa fa-star checked" />
+                                  <span className="fa fa-star checked" /></> : ''}
+                                  </div>
+                                <h6>
+                                  {comment.user_id}
+                                </h6>
+                                <p>{comment.body}</p>
+                                
+                              </div>
+                            </div> */}
+      {/* )})} */}
+      {/* </div> */}
+      {/* </div> */}
+      {/* </div> */}
+      {/* </section> */}
 
-    );
+
+      {/* <section>
+      <div className='databox'>
+                                <form onSubmit={rating}>
+                            <span className='d1'>
+                                <label htmlFor="" className='label2'>Name</label>
+                                <input type="text" className='inp' name='uname'  onChange={(e)=>SetName(e.target.value)}/>
+                            </span><br />
+                            <span className='d1'>
+                                <label htmlFor="" className='label2'>Email</label>
+                                <input type="text" className='inp' name='email'  onChange={(e)=>SetEmail(e.target.value)}/>
+                            </span><br />
+                            <span className='d1'>
+                                <label htmlFor="" className='label2'>Comment<span className='red'>*</span></label>
+                                <input type="text" className='inp' name='msg'   onChange={(e)=>SetMsg(e.target.value)}/>
+                            </span><br />
+                                <div style={{ width: "60%", marginLeft: "-10%" }}>
+                                   <button className='butt c2'>Submit</button>
+                                </div>
+                                </form>
+                                </div>
+  
+    </section><br/> */}
+
+
+
+    </>
+  );
 }
-
 export default About;
